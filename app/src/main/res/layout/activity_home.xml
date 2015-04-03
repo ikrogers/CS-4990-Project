@@ -30,9 +30,12 @@
             android:layout_height="wrap_content"
             android:text="@string/OPORD_btn"
             android:id="@+id/OPORD_btn"
-            android:layout_alignTop="@+id/announcements_btn"
-            android:layout_alignRight="@+id/ATOMMSbtn"
-            android:layout_alignEnd="@+id/ATOMMSbtn" />
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="37dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
 
 
         <Button
@@ -40,12 +43,11 @@
             android:layout_height="wrap_content"
             android:text="@string/announcements_btn"
             android:id="@+id/announcements_btn"
-            android:layout_marginTop="46dp"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/OPORD_btn"
-            android:layout_toEndOf="@+id/OPORD_btn"
-            android:layout_marginLeft="37dp"
-            android:layout_marginStart="37dp" />
+            android:layout_below="@+id/OPORD_btn"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
 
 
 
@@ -54,14 +56,33 @@
             android:layout_height="wrap_content"
             android:text="ATOMMS"
             android:id="@+id/ATOMMSbtn"
-            android:layout_below="@+id/OPORD_btn"
+            android:layout_below="@+id/announcements_btn"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginLeft="72dp"
-            android:layout_marginStart="72dp"
-            android:layout_marginTop="91dp" />
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VSU Shuttle Tracker"
+            android:id="@+id/shuttleTracker"
+            android:layout_below="@+id/ATOMMSbtn"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recreation Center Information"
+            android:id="@+id/rec"
+            android:layout_below="@+id/shuttleTracker"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
 
     </RelativeLayout>

@@ -21,9 +21,9 @@ public class HomeActivity extends Activity {
     private Button mOPORDbtn;
     private Button mAnnouncementsBtn;
     private Button mATOMMS;
-    private Button mOPORDbtn2;
-    private Button mOPORDbtn3;
-    private Button mOPORDbtn4;
+    private Button mShuttleTracker;
+    private Button mAFI;
+    private Button mSrc;
     private Button mOPORDbtn5;
     private Button mOPORDbtn6;
     private Button mOPORDbtn7;
@@ -39,6 +39,10 @@ public class HomeActivity extends Activity {
         mOPORDbtn = (Button) findViewById(R.id.OPORD_btn);
         mAnnouncementsBtn = (Button) findViewById(R.id.announcements_btn);
         mATOMMS = (Button) findViewById(R.id.ATOMMSbtn);
+        mShuttleTracker = (Button) findViewById(R.id.shuttleTracker);
+        mSrc = (Button) findViewById(R.id.rec);
+
+        // mAFI = (Button) findViewById(R.id.AFI);
 
 
         mOPORDbtn.setOnClickListener(new View.OnClickListener() {
@@ -71,17 +75,39 @@ public class HomeActivity extends Activity {
             }
         });
 
+        mShuttleTracker.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), ShuttleTrackerActiviy.class);
+                startActivity(intent);
+            }
+        });
+
+        mSrc.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), SRCActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
+
 
 
        //debug.setOnClickListener(new View.OnClickListener() {
-
-
-            //@Override
-           // public void onClick(View v) {
-            //    Intent intent = new Intent(getBaseContext(), PickFolderWithOpenerActivity.class);
+          //  @Override
+          //  public void onClick(View v) {
+           //     Intent intent = new Intent(getBaseContext(), PickFolderWithOpenerActivity.class);
             //    startActivity(intent);
            // }
-       // });
+      //  });
 
     }
 

@@ -80,7 +80,7 @@ public class AnnouncementsActivity extends BaseDemoActivity {
         IntentSender intentSender = Drive.DriveApi
                 .newOpenFileActivityBuilder()
                 .setMimeType(new String[] { "text/plain", "text/html", "application/msword", "application/pdf","image/jpeg","image/png","image/bmp","application/vnd.ms-excel","application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","application/vnd.openxmlformats-officedocument.wordprocessingml.document","application/vnd.openxmlformats-officedocument.presentationml.presentation"})
-                .setActivityStartFolder(DriveId.decodeFromString("DriveId:CAESSDBCMEJQZ1lXN29veDBma3RQWkVwdFowNWthVTgyU3pSSGFVUktRMGhhTkdGWFprMDFPRlU0Y21WTVFrY3lSMFJzZG1WMVRHOBiOAyDE7ta50lIoAQ=="))
+                .setActivityStartFolder(DriveId.decodeFromString("DriveId:CAESSDBCLVFGRTFmYmhpOWhmbmxPUWxBMWFreEpRbEJRUmxOVllsUllTazh4WWprdGNteGZaWE5GT1RkdFIxRkpTRUZCWkVzMmMyOBjuAyDE7ta50lIoAQ=="))
                 .build(getGoogleApiClient());
         // DriveFile file = Drive.DriveApi.getFile(getGoogleApiClient(), DriveId.decodeFromString("DriveId:CAESLDFuTEttWDQxOXh1RVctbnZJN0ljX215VWFoT25QWUtMNjQ1S1lyUjU0MEpJGJADIMTu1rnSUigA"));
 
