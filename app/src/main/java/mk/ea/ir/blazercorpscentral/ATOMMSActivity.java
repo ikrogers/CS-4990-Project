@@ -43,7 +43,7 @@ private WebView mWebView;
                 Toast.makeText(activity, "Oh no! " + description, Toast.LENGTH_SHORT).show();
             }
         });
-
+        Toast.makeText(activity, "ATOMMS is loading... Please wait.", Toast.LENGTH_SHORT).show();
         mWebView.loadUrl("http://atomms.herokuapp.com");
 
     }
