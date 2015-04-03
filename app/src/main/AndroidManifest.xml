@@ -3,6 +3,10 @@
     package="mk.ea.ir.blazercorpscentral" >
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,6 +25,10 @@
         <activity android:name=".OperationsOrdersActivity"/>
 
         <activity android:name=".AnnouncementsActivity"/>
+
+        <activity android:name=".ATOMMSActivity"/>
+
+        <activity android:name=".PickFolderWithOpenerActivity"/>
 
     </application>
 

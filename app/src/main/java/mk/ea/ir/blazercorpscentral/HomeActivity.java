@@ -1,16 +1,4 @@
-/**
- * Copyright 2013 Google Inc. All Rights Reserved.
- *
- *  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
- * in compliance with the License. You may obtain a copy of the License at
- *
- *  http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software distributed under the
- * License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
- * express or implied. See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 
 package mk.ea.ir.blazercorpscentral;
 import android.app.Activity;
@@ -20,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 
@@ -29,7 +18,17 @@ import android.widget.ListView;
 public class HomeActivity extends Activity {
 
 
-    private ListView mListViewSamples;
+    private Button mOPORDbtn;
+    private Button mAnnouncementsBtn;
+    private Button mATOMMS;
+    private Button mOPORDbtn2;
+    private Button mOPORDbtn3;
+    private Button mOPORDbtn4;
+    private Button mOPORDbtn5;
+    private Button mOPORDbtn6;
+    private Button mOPORDbtn7;
+    private Button debug;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,17 +36,53 @@ public class HomeActivity extends Activity {
         setContentView(R.layout.activity_home);
 
         String[] titles = getResources().getStringArray(R.array.titles_array);
-        mListViewSamples = (ListView) findViewById(R.id.listViewSamples);
-        mListViewSamples.setAdapter(
-                new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, titles));
-        mListViewSamples.setOnItemClickListener(new OnItemClickListener() {
+        mOPORDbtn = (Button) findViewById(R.id.OPORD_btn);
+        mAnnouncementsBtn = (Button) findViewById(R.id.announcements_btn);
+        mATOMMS = (Button) findViewById(R.id.ATOMMSbtn);
 
-                @Override
-            public void onItemClick(AdapterView<?> arg0, View arg1, int i, long arg3) {
-                Intent intent = new Intent(getBaseContext(), mk.ea.ir.blazercorpscentral.OperationsOrdersActivity.class );
+
+        mOPORDbtn.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), OperationsOrdersActivity.class);
                 startActivity(intent);
             }
         });
+
+        mAnnouncementsBtn.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), AnnouncementsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mATOMMS.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), ATOMMSActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+       //debug.setOnClickListener(new View.OnClickListener() {
+
+
+            //@Override
+           // public void onClick(View v) {
+            //    Intent intent = new Intent(getBaseContext(), PickFolderWithOpenerActivity.class);
+            //    startActivity(intent);
+           // }
+       // });
+
     }
 
 }

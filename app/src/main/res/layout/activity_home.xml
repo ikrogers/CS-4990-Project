@@ -20,10 +20,49 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity" >
 
-    <ListView
-        android:id="@+id/listViewSamples"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-    </ListView>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal|top">
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/OPORD_btn"
+            android:id="@+id/OPORD_btn"
+            android:layout_alignTop="@+id/announcements_btn"
+            android:layout_alignRight="@+id/ATOMMSbtn"
+            android:layout_alignEnd="@+id/ATOMMSbtn" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/announcements_btn"
+            android:id="@+id/announcements_btn"
+            android:layout_marginTop="46dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/OPORD_btn"
+            android:layout_toEndOf="@+id/OPORD_btn"
+            android:layout_marginLeft="37dp"
+            android:layout_marginStart="37dp" />
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ATOMMS"
+            android:id="@+id/ATOMMSbtn"
+            android:layout_below="@+id/OPORD_btn"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="72dp"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="91dp" />
+
+
+
+
+    </RelativeLayout>
 </FrameLayout>
