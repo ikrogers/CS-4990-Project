@@ -61,6 +61,7 @@ public class OperationsOrdersActivity extends BaseDemoActivity {
     private String mSelectedFileName;
     private String mSelectedFileExtension;
     private File mFilePATH;
+    private final String VIEW_DOC = "http://docs.google.com/gview?embedded=true&url=";
 
 
     @Override

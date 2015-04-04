@@ -41,8 +41,7 @@ public class HomeActivity extends Activity {
         mATOMMS = (Button) findViewById(R.id.ATOMMSbtn);
         mShuttleTracker = (Button) findViewById(R.id.shuttleTracker);
         mSrc = (Button) findViewById(R.id.rec);
-
-        // mAFI = (Button) findViewById(R.id.AFI);
+         mAFI = (Button) findViewById(R.id.AFIbtn);
 
 
         mOPORDbtn.setOnClickListener(new View.OnClickListener() {
@@ -91,6 +90,15 @@ public class HomeActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), SRCActivity.class);
+                startActivity(intent);
+            }
+        });
+        mAFI.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), AFIActivity.class);
                 startActivity(intent);
             }
         });

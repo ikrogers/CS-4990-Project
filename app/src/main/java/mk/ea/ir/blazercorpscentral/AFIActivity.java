@@ -1,9 +1,14 @@
 package mk.ea.ir.blazercorpscentral;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Window;
+import android.webkit.DownloadListener;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -14,6 +19,7 @@ import android.widget.Toast;
  */
 public class AFIActivity extends Activity {
 private WebView mWebView;
+    private final String VIEW_DOC = "http://docs.google.com/gview?embedded=true&url=";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -23,6 +29,12 @@ private WebView mWebView;
 
         mWebView = new WebView(this);
         mWebView.getSettings().setJavaScriptEnabled(true);
+
+        mWebView.getSettings().setAllowFileAccess(true);
+        mWebView.getSettings().setAllowContentAccess(true);
+        mWebView.getSettings().setAppCacheEnabled(true);
+
+
         getWindow().requestFeature(Window.FEATURE_PROGRESS);
         setContentView(mWebView);
 
@@ -40,10 +52,18 @@ private WebView mWebView;
                 Toast.makeText(activity, "Oh no! " + description, Toast.LENGTH_SHORT).show();
             }
         });
+
+
         Toast.makeText(activity, "USAF Dress and Appearance Standards are loading... Please wait.", Toast.LENGTH_SHORT).show();
-        Toast.makeText(activity, "Link is located on the page for download", Toast.LENGTH_LONG).show();
 
         mWebView.loadUrl("http://static.e-publishing.af.mil/production/1/af_a1/publication/afi36-2903/afi36-2903.pdf");
+            mWebView.setDownloadListener(new DownloadListener() {
+                public void onDownloadStart(String url, String userAgent, String something, String mimetype, long contentLength) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    intent.setData(Uri.parse(VIEW_DOC + mWebView.getUrl()));
+                    startActivity(intent);
+                }
+            });
 
     }
 
