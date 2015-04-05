@@ -18,6 +18,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".HomeActivity" >
 
     <RelativeLayout
@@ -35,7 +36,9 @@
             android:layout_alignParentStart="true"
             android:layout_marginTop="37dp"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:elegantTextHeight="true"
+            android:clickable="true" />
 
 
         <Button
@@ -47,7 +50,9 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:elegantTextHeight="true"
+            android:clickable="true" />
 
 
 
@@ -60,7 +65,9 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:elegantTextHeight="true"
+            android:clickable="true" />
 
         <Button
             android:layout_width="wrap_content"
@@ -71,7 +78,9 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:elegantTextHeight="true"
+            android:clickable="true" />
 
         <Button
             android:layout_width="wrap_content"
@@ -82,7 +91,9 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:elegantTextHeight="true"
+            android:clickable="true" />
 
         <Button
             android:layout_width="wrap_content"
@@ -93,7 +104,9 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:elegantTextHeight="true"
+            android:clickable="true" />
 
 
     </RelativeLayout>

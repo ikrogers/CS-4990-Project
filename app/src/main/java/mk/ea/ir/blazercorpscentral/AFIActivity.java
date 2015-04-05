@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Window;
 import android.webkit.DownloadListener;
@@ -20,6 +21,7 @@ import android.widget.Toast;
 public class AFIActivity extends Activity {
 private WebView mWebView;
     private final String VIEW_DOC = "http://docs.google.com/gview?embedded=true&url=";
+    private final String URL = "http://static.e-publishing.af.mil/production/1/af_a1/publication/afi36-2903/afi36-2903.pdf";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -56,11 +58,13 @@ private WebView mWebView;
 
         Toast.makeText(activity, "USAF Dress and Appearance Standards are loading... Please wait.", Toast.LENGTH_SHORT).show();
 
-        mWebView.loadUrl("http://static.e-publishing.af.mil/production/1/af_a1/publication/afi36-2903/afi36-2903.pdf");
+        mWebView.loadUrl(URL);
             mWebView.setDownloadListener(new DownloadListener() {
                 public void onDownloadStart(String url, String userAgent, String something, String mimetype, long contentLength) {
                     Intent intent = new Intent(Intent.ACTION_VIEW);
-                    intent.setData(Uri.parse(VIEW_DOC + mWebView.getUrl()));
+                    Log.w("AFI", "File Location " + (VIEW_DOC + URL));
+
+                    intent.setData(Uri.parse(VIEW_DOC + URL));
                     startActivity(intent);
                 }
             });
