@@ -24,7 +24,7 @@ public class HomeActivity extends Activity {
     private Button mShuttleTracker;
     private Button mAFI;
     private Button mSrc;
-    private Button mOPORDbtn5;
+    private Button mPFA;
     private Button mOPORDbtn6;
     private Button mOPORDbtn7;
     private Button debug;
@@ -42,6 +42,7 @@ public class HomeActivity extends Activity {
         mShuttleTracker = (Button) findViewById(R.id.shuttleTracker);
         mSrc = (Button) findViewById(R.id.rec);
          mAFI = (Button) findViewById(R.id.AFIbtn);
+        mPFA = (Button) findViewById(R.id.pfa);
 
 
         mOPORDbtn.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +51,16 @@ public class HomeActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), OperationsOrdersActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mPFA.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), PFAcalcActivity.class);
                 startActivity(intent);
             }
         });
